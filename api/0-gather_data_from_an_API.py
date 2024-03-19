@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 """
-    Given employee ID, returns information about his/her TODO list progress.
+Given employee ID, returns information about his/her TODO list progress.
 """
 
 import requests
 import sys
+
+HTTP_OK = 200
 
 def get_employee_todo_progress(employee_id):
     # Hypothetical API endpoint
@@ -14,7 +16,7 @@ def get_employee_todo_progress(employee_id):
     response = requests.get(url)
 
     # Check if the request was successful
-    if response.status_code == 200:
+    if response.status_code == HTTP_OK:
         data = response.json()
 
         # Extract necessary information from the response
