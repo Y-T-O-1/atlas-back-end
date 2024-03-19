@@ -8,6 +8,7 @@ import sys
 
 HTTP_OK = 200
 
+
 def get_employee_todo_progress(employee_id):
     # Hypothetical API endpoint
     url = f"https://jsonplaceholder.typicode.com/todos"
@@ -34,6 +35,7 @@ def get_employee_todo_progress(employee_id):
             print(f"\t {task['title']}")
     else:
         print(f"Failed to fetch data for employee ID {employee_id}. Status code: {response.status_code}")
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
