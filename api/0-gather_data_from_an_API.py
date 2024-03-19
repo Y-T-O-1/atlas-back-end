@@ -30,11 +30,11 @@ def get_employee_todo_progress(employee_id):
         number_of_done_tasks = len(done_tasks)
 
         # Display progress
-        print(f"Employee {employee_name} is done with tasks({number_of_done_tasks}/{total_tasks}):")
+        print(f"Employee {} is done with tasks({}/{}):")
         for task in done_tasks:
             print(f"\t {task['title']}")
     else:
-        print(f"Failed to fetch data for employee ID {employee_id}. Status code: {response.status_code}")
+        print(f"Failed to fetch data {employee_id}. Status code: {response.status_code}")
 
 
 if __name__ == "__main__":
