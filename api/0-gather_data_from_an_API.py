@@ -3,7 +3,7 @@ import sys
 
 def get_employee_todo_progress(employee_id):
     # Hypothetical API endpoint
-    url = f"https://api.example.com/employees/{employee_id}/todos"
+    url = f"https://jsonplaceholder.typicode.com/todos"
     
     # Send a GET request to the API
     response = requests.get(url)
