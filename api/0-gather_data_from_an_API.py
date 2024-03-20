@@ -6,6 +6,7 @@ information about his/her TODO list progress.
 import requests
 import sys
 
+
 def fetch_employee_todo_list(employee_id):
     """
     Fetches the TODO list progress for a given employee ID.
@@ -24,6 +25,7 @@ def fetch_employee_todo_list(employee_id):
         print(f"Error fetching data: {response.status_code}")
         sys.exit(1)
 
+
 def display_todo_list_progress(employee_id):
     """
     Displays the TODO list progress for a given employee ID.
@@ -38,9 +40,11 @@ def display_todo_list_progress(employee_id):
         done_tasks = [task for task in todo_list if task["completed"]]
         total_done_tasks = len(done_tasks)
 
-        print(f"Employee {employee_name} is done with tasks({total_done_tasks}/{total_tasks}):")
+        print(f"Employee {employee_name} is done with tasks("
+      f"{total_done_tasks}/{total_tasks}):")
         for task in done_tasks:
             print(f"\t {task['title']}")
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
