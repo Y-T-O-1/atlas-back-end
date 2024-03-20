@@ -14,7 +14,7 @@ if __name__ == "__main__":
     EMPLOYEE_ID = sys.argv[1]
 
     response = requests.get(
-        f"{API_URL}/users/{EMPLOYEE_ID}/todos",
+        f"{API_URL}/{EMPLOYEE_ID}/todos",
         params={"_expand": "user"}
     )
     data = response.json()
