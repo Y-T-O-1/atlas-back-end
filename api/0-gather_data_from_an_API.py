@@ -10,7 +10,7 @@ if __name__ == "__main__":
         print(f"UsageError: python3 {__file__} employee_id(int)")
         sys.exit(1)
 
-    API_URL = "https://jsonplaceholder.typicode.com"
+    API_URL = "https://jsonplaceholder.typicode.com/users"
     EMPLOYEE_ID = sys.argv[1]
 
     response = requests.get(
